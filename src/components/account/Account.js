@@ -24,9 +24,9 @@ axios.get('/api/user-data').then(res => {
                 {
                     user.user_name ? (
                 <div>
+                    <img src={user.picture} alt='' />
                     <p>Account Holder: {user.user_email}</p>
                     <p>Account Email: {user.email}</p>
-                    <img src={user.picture} alt='' />
                     <button onClick={() => this.logout()}>logout</button>
                 </div>
                 ) : <p>Please Log In.</p>

@@ -1,7 +1,17 @@
 import React, {Component} from 'react';
+import axios from 'axios';
+import {connect} from 'react-redux';
+import {updateResorts} from './../../ducks/reducer';
 
 
-export default class Home extends Component {
+class Home extends Component {
+
+    componentDidMount(){
+        axios.get('/api/resorts').then(res => {
+            this.props.updateResorts(res.data)
+        })
+    }
+
     render(){
         return(
             <div>
@@ -10,3 +20,6 @@ export default class Home extends Component {
         )
     }
 }
+
+
+export default connect(null, {updateResorts})(Home)
