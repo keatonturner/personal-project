@@ -3,10 +3,11 @@ const express = require('express');
 const session = require('express-session');
 const axios = require('axios');
 const massive = require('massive');
+const bodyParser = require('body-parser');
 const ctlr = require('./controller');
 
 const app = express();
-
+app.use(bodyParser.json());
 const {
     CONNECTION_STRING,
     SESSION_SECRET,
@@ -77,7 +78,11 @@ let {sub, email, name, picture} = resWithUserData.data;
   });
 
   app.get('/api/resorts', ctlr.allResorts)
-  app.get('/api/resorts/:id', ctlr.specificResort)
+  app.get('/api/resort/:id', ctlr.specificResort)
+  app.get('/api/cart', ctlr.createCart)
+  app.get('/api/cartData', ctlr.cartResorts)
+  app.post('/api/addToCart', ctlr.addToCart)
+
 
 massive(CONNECTION_STRING).then(db => {
     app.set('db', db);
