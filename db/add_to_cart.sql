@@ -1,0 +1,1 @@
+insert into cart(ordersid, resortsid, pass, price) values($1, $2, $3, $4);

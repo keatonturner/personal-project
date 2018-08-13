@@ -1,0 +1,19 @@
+.login-page {
+    background-image: url('https://lifelawni.files.wordpress.com/2016/02/skiing.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.login-header {
+    color: hsl(0, 0%, 0%);
+    margin: 30px;
+    background-color: white;
+    border: 1px solid black;
+    opacity: 0.5; 
+}
+

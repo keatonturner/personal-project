@@ -1,0 +1,1 @@
+insert into orders(userid, active) values($1, true) returning *;

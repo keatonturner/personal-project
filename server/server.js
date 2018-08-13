@@ -82,6 +82,7 @@ let {sub, email, name, picture} = resWithUserData.data;
   app.get('/api/cart', ctlr.createCart)
   app.get('/api/cartData', ctlr.cartResorts)
   app.post('/api/addToCart', ctlr.addToCart)
+  app.delete('/api/resort/:id', ctlr.deleteFromCart)
 
 
 massive(CONNECTION_STRING).then(db => {

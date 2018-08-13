@@ -5,3 +5,11 @@ create table users(
     auth_id text,
     picture text
 )
+create table cart(
+    resortsid integer references resorts(id),
+     quantity integer, 
+     pass varchar(6), 
+     ordersid integer references orders(id)
+     )
+
+     insert into orders(active, total, userid) values(true, 2, 3)

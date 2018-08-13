@@ -1,0 +1,1 @@
+delete from cart where resortsid = $1 and ordersid = $2

@@ -19,7 +19,7 @@ console.log('rendering')
             
         <div className='login' style={wellStyles}>
                 <div className='login-header'>
-                    <h1>Ski Utah</h1>  
+                    <h1>We Ski Utah</h1>  
                 </div>
                 <div className='login-btn'>
 
