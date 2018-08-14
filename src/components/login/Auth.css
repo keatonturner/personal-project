@@ -1,5 +1,5 @@
-.login-page {
-    background-image: url('https://lifelawni.files.wordpress.com/2016/02/skiing.jpg');
+.jumbotron {
+    background-image: url('http://theknow.denverpost.com/wp-content/uploads/2017/10/SPRINGSKIINGA-1080x754.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -7,7 +7,7 @@
     bottom: 0;
     height: 100vh;
     display: flex;
-    align-items: center;
+   align-items: center;
 }
 .login-header {
     color: hsl(0, 0%, 0%);

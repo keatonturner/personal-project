@@ -13,8 +13,9 @@ function Nav(props){
     } else {
 
     return(
-        <nav className='nav nav-pills nav-justified navbar sticky-top navbar-expand-md navbar-dark bg-dark'  style={NavBar} >
+        <nav className='nav nav-pills nav-justified navbar navbar-expand-md navbar-dark bg-dark'  style={NavBar} >
         <div className='nav navbar' >
+        
             <h1>We ski utah</h1>     
         </div>
         <div className='nav-item nav justify-content-end ' style={{color: 'white'}}>

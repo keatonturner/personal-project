@@ -5,6 +5,8 @@ const axios = require('axios');
 const massive = require('massive');
 const bodyParser = require('body-parser');
 const ctlr = require('./controller');
+const config = require('./config')
+const stripe = require('stripe')(config.secret_key);
 
 const app = express();
 app.use(bodyParser.json());
@@ -77,12 +79,17 @@ let {sub, email, name, picture} = resWithUserData.data;
     res.send();
   });
 
+
+
   app.get('/api/resorts', ctlr.allResorts)
   app.get('/api/resort/:id', ctlr.specificResort)
   app.get('/api/cart', ctlr.createCart)
   app.get('/api/cartData', ctlr.cartResorts)
   app.post('/api/addToCart', ctlr.addToCart)
   app.delete('/api/resort/:id', ctlr.deleteFromCart)
+  app.put('/api/quantity', ctlr.quantity)
+  app.post('/api/payment', ctlr.payment)
+  app.put('/api/clearCart', ctlr.clearCart)
 
 
 massive(CONNECTION_STRING).then(db => {

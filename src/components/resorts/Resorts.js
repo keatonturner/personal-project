@@ -16,7 +16,7 @@ class Resorts extends Component {
         })
         return(
             <div>
-                resorts page
+                
                 {resortList}
             </div>
         )

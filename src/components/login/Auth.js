@@ -12,23 +12,17 @@ login(){
 }
 
     render(){
-        const wellStyles = { maxWidth: 400, margin: '0 auto 10px', fontSize: '70px' };
-console.log('rendering')
+        
         return (
-    <div className='login-page'>
-            
-        <div className='login' style={wellStyles}>
-                <div className='login-header'>
-                    <h1>We Ski Utah</h1>  
-                </div>
-                <div className='login-btn'>
-
-                
-                    <button className='btn btn-primary btn-lg btn-block' type='button' onClick={() => this.login()}>Login</button>   
-                </div>
-        </div>
-                      
+    <div className='jumbotron jumbotron-fluid'>
+        <div className="container">
+                    <h1 className="display-4 text-primary font-weight-bold">We Ski Utah</h1>  
+                    <hr />
+                    <button className='btn btn-primary btn-lg' type='button' onClick={() => this.login()}>Login</button>    
+        </div>       
     </div>
+                      
+   
         )
     }
 }

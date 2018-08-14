@@ -7,7 +7,8 @@ class Resort extends React.Component {
     constructor(){
         super();
         this.state = {
-            resort: []
+            resort: [],
+            quantity: ''
         }
     }
 
@@ -20,7 +21,6 @@ class Resort extends React.Component {
         })
     }
     addToCartDayPass(e){
-        console.log(this.props.match.params.id)
         axios.post('/api/addToCart', {price: e.daypass, pass: 'Day', id: this.props.match.params.id}).then(res => {
             console.log(res)
         })
@@ -30,6 +30,7 @@ class Resort extends React.Component {
 
         })
     }
+   
 
 
     render(){  
@@ -41,10 +42,10 @@ class Resort extends React.Component {
                 <p>City: {e.city}</p>
                 <div>
                 <p>Day Pass: {`$${e.daypass}.00`}</p>
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-sm" onClick={() => this.addToCartDayPass(e)}>Add To Cart</button> 
-                            <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-sm">
-                                    <h1 class="modal-content">
+                <button type="button" className="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-sm" onClick={() => this.addToCartDayPass(e)}>Add To Cart</button> 
+                            <div className="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                                <div className="modal-dialog modal-sm">
+                                    <h1 className="modal-content">
                                     Added To Cart
                                     </h1>
                                 </div>
@@ -52,10 +53,10 @@ class Resort extends React.Component {
                 </div>
                 <div>
                 <p>Season Pass: {`$${e.seasonpass}.00`}</p>
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-sm" onClick={() => this.addToCartSeasonPass(e)}>Add To Cart</button>   
-                            <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-sm">
-                                    <h1 class="modal-content text-white">
+                <button type="button" className="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-sm" onClick={() => this.addToCartSeasonPass(e)}>Add To Cart</button>   
+                            <div className="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                                <div className="modal-dialog modal-sm">
+                                    <h1 className="modal-content text-white">
                                     Added To Cart
                                     </h1>
                                 </div>
