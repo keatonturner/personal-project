@@ -21,24 +21,101 @@ class Home extends Component {
     <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="8"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="9"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="10"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="11"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="12"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="13"></li>
   </ol>
   <div className=" carousel-inner h-50">
     <div className="carousel-item active">
-      <img className="d-block w-100" src="https://image3.redbull.com/rbcom/010/2014-12-19/1331696030842_2/0010/1/1500/1000/2/snowboarder-elias-elhardt-in-action-for-kashmir-calling-snowboard-film-in-gulmarg-india.jpg" alt="Max-height 100%"/>
+      <img className="d-block w-100" src="https://www.xtns.org/wp-content/uploads/2014/06/ski-resort-magnificent-park-city-mountain-resort-ski-instructor-park-city-ski-resort-vertical-drop-park-city-ski-resort-volunteers-park-city-mountain-resort-vs-talisker-park-city-mountain-resort-v.jpg" alt="Max-height 100%"/>
       <div className="carousel-caption d-nine d-md-block bg-dark">
-        <h1 className="text-light">Utah is home to the greatest snow on earth.</h1>
+        <h1 className="text-light">Park City Ski Resort</h1>
       </div>
     </div>
     <div className="carousel-item">
-      <img className="d-block w-100" src="http://www.blog-ski.fr/wp-content/uploads/2017/01/mont-sainte-anne-hiver-quebec-1.jpg" alt="Max-height 100%"/>
+      <img className="d-block w-100" src="https://skimap.org/data/225/1903/1446588920jpg_render.jpg" alt="Max-height 100%"/>
       <div className="carousel-caption d-nine d-md-block bg-dark">
-        <h1 className="text-light">Park City Ski Resort is known to be the 10th biggest ski resort in the world.</h1>
+        <h1 className="text-light">Solitude Mountain Resort</h1>
       </div>
     </div>
     <div className="carousel-item">
-      <img className="d-block w-100" src="https://www.skiutah.com/blog/authors/erika/hot-spring-ski-and-snowboarding/pictures/picture--large/picture--large" alt="Max-height 100%" />
+      <img className="d-block w-100" src="https://skimap.org/data/223/7/1211840866.jpg" alt="Max-height 100%" />
       <div className="carousel-caption d-nine d-md-block bg-dark">
-        <h1 className="text-light">Utah's Cottonwood Canyons are one of the snowiest places in the world averaging about 551 inches of snow a year.</h1>
+        <h1 className="text-light">Deer Valley Ski resort</h1>
+      </div>
+    </div>
+    <div className="carousel-item">
+      <img className="d-block w-100" src="https://skimap.org/data/219/7/1232225432.jpg" alt="Max-height 100%" />
+      <div className="carousel-caption d-nine d-md-block bg-dark">
+        <h1 className="text-light">Snowbasin Ski Resort</h1>
+      </div>
+    </div>
+    <div className="carousel-item">
+      <img className="d-block w-100" src="http://www.skicentral.com/assets/images/trailmaps/801008-1200.jpg" alt="Max-height 100%" />
+      <div className="carousel-caption d-nine d-md-block bg-dark">
+        <h1 className="text-light">Powder Mountain Ski Resort</h1>
+      </div>
+    </div>
+    <div className="carousel-item">
+      <img className="d-block w-100" src="https://i.pinimg.com/originals/6a/2b/fc/6a2bfcb9b6affe9cf68e2e842c4b11fc.jpg" alt="Max-height 100%" />
+      <div className="carousel-caption d-nine d-md-block bg-dark">
+        <h1 className="text-light">Beaver Mountain Ski Resort</h1>
+      </div>
+    </div>
+    <div className="carousel-item">
+      <img className="d-block w-100" src="https://itech104boom.files.wordpress.com/2013/11/snowbird_trailmap_1200w.jpg?w=1400" alt="Max-height 100%" />
+      <div className="carousel-caption d-nine d-md-block bg-dark">
+        <h1 className="text-light">SnowBird Mountain Resort</h1>
+      </div>
+    </div>
+    <div className="carousel-item">
+      <img className="d-block w-100" src="https://skimap.org/data/222/1903/1414525007.jpg" alt="Max-height 100%" />
+      <div className="carousel-caption d-nine d-md-block bg-dark">
+        <h1 className="text-light">Brighton Ski Resort</h1>
+      </div>
+    </div>
+    <div className="carousel-item">
+      <img className="d-block w-100" src="https://res.cloudinary.com/liftopia/image/upload/c_fit,d_default_logo_1.png,f_auto,h_800,q_auto,w_800/v1/production/trail_maps/7555bdee477aa402ff982279440299a8" alt="Max-height 100%" />
+      <div className="carousel-caption d-nine d-md-block bg-dark">
+        <h1 className="text-light">Sundance Ski Resort</h1>
+      </div>
+    </div>
+    <div className="carousel-item">
+      <img className="d-block w-100" src="https://www.skiutah.com/members/alta/trailmaps/picturewithconversions/fullsize" alt="Max-height 100%" />
+      <div className="carousel-caption d-nine d-md-block bg-dark">
+        <h1 className="text-light">Alta Ski Resort</h1>
+      </div>
+    </div>
+    <div className="carousel-item">
+      <img className="d-block w-100" src="https://www.skiutah.com/members/brian-head/trailmaps/picturewithconversions/fullsize" alt="Max-height 100%" />
+      <div className="carousel-caption d-nine d-md-block bg-dark">
+        <h1 className="text-light">Brian Head Ski Resort</h1>
+      </div>
+    </div>
+    <div className="carousel-item">
+      <img className="d-block w-100" src="https://www.skiutah.com/members/eagle-point/trailmaps/picturewithconversions/fullsize" alt="Max-height 100%" />
+      <div className="carousel-caption d-nine d-md-block bg-dark">
+        <h1 className="text-light">Eagle Point Ski Resort</h1>
+      </div>
+    </div>
+    <div className="carousel-item">
+      <img className="d-block w-100" src="https://www.skiutah.com/members/cherry/trailmaps/cherry-peak/fullsize/" alt="Max-height 100%" />
+      <div className="carousel-caption d-nine d-md-block bg-dark">
+        <h1 className="text-light">Cherry Peak Ski Resort</h1>
+      </div>
+    </div>
+    <div className="carousel-item">
+      <img className="d-block w-100" src="https://www.skiutah.com/members/nordic-valley/trailmaps/picturewithconversions/fullsize" alt="Max-height 100%" />
+      <div className="carousel-caption d-nine d-md-block bg-dark">
+        <h1 className="text-light">Nordic Valley Ski Resort</h1>
       </div>
     </div>
   </div>

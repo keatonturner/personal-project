@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 const {
     CONNECTION_STRING,
     SESSION_SECRET,
-    SERVER_PORT,
+    REACT_APP_SERVER_PORT,
     REACT_APP_DOMAIN,
     REACT_APP_CLIENT_ID,
     CLIENT_SECRET
@@ -94,8 +94,8 @@ let {sub, email, name, picture} = resWithUserData.data;
 
 massive(CONNECTION_STRING).then(db => {
     app.set('db', db);
-app.listen(SERVER_PORT, () => {
-    console.log(`listening on port: ${SERVER_PORT}`)
+app.listen(REACT_APP_SERVER_PORT, () => {
+    console.log(`listening on port: ${REACT_APP_SERVER_PORT}`)
     })
 });
 

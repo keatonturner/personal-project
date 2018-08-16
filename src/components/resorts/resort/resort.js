@@ -33,16 +33,30 @@ class Resort extends React.Component {
    
 
 
-    render(){  
+    render(){ 
+        const styles = {width: '100vw', height: '90vh'} 
+        const styles2 = {width: '30vw', height: '40vh', paddingTop: '50px', flexDirection: 'space-around'}
         let resortInfo = this.state.resort.map((e, i) => {
             return(
-                <div>
-                <h1>{e.resort}</h1>
-                <p>Address: {e.address}</p>
-                <p>City: {e.city}</p>
-                <div>
-                <p>Day Pass: {`$${e.daypass}.00`}</p>
-                <button type="button" className="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-sm" onClick={() => this.addToCartDayPass(e)}>Add To Cart</button> 
+            <div className="bg-dark" style={styles} >
+                <h1 className="bg-light text-dark">{e.resort}</h1>
+                <div className="list-group list-group-flush" >
+                    <div className="list-group-item d-flex bd-highlight bg-dark" >
+                        <h2 className="p-2 flex-fill bd-highlight text-light">Address:</h2>
+                        <h4 className="p-2 flex-fill bd-highlight text-light">{e.address}</h4>                  
+                    </div>
+                    <div className="list-group-item d-flex bd-highlight bg-dark" >
+                        <h2 className="p-2 flex-fill bd-highlight text-light">City:</h2>
+                        <h4 className="p-2 flex-fill bd-highlight text-light"> {e.city}</h4>         
+                    </div>
+                <div className="d-flex align-items-center justify-content-around bd-highlight bg-dark"  >
+                    <div className="d-flex align-items-center flex-column justify-content-around bg-light " style={styles2} >
+                        <h2 className="text-dark">Day Pass</h2>
+                    <div className="d-flex bd-highlight bg-light">
+                        <h3 className="p-2 flex-fill bd-highlight text-dark">Price:</h3>
+                        <h4 className="p-2 flex-fill bd-highlight text-dark " >{`$${e.daypass}.00`}</h4>
+                    </div>
+                        <button type="button" className="btn btn-light btn-sm text-dark border-5 border-dark" data-toggle="modal" data-target=".bd-example-modal-sm" onClick={() => this.addToCartDayPass(e)}>Add To Cart</button> 
                             <div className="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
                                 <div className="modal-dialog modal-sm">
                                     <h1 className="modal-content">
@@ -50,10 +64,15 @@ class Resort extends React.Component {
                                     </h1>
                                 </div>
                             </div>             
-                </div>
-                <div>
-                <p>Season Pass: {`$${e.seasonpass}.00`}</p>
-                <button type="button" className="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-sm" onClick={() => this.addToCartSeasonPass(e)}>Add To Cart</button>   
+                    </div>
+                    
+                    <div className=" d-flex align-items-center flex-column justify-content-around bg-light" style={styles2}>
+                        <h2 className="text-dark" >Season Pass</h2>
+                    <div className="d-flex bd-highlight bg-light">
+                        <h3 className="p-2 flex-fill bd-highlight text-dark">Price:</h3>
+                        <h4 className="p-2 flex-fill bd-highlight text-dark"> {`$${e.seasonpass}.00`}</h4>
+                    </div>
+                        <button type="button" className="btn btn-light btn-sm text-dark border-5 border-dark" data-toggle="modal" data-target=".bd-example-modal-sm" onClick={() => this.addToCartSeasonPass(e)}>Add To Cart</button>   
                             <div className="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
                                 <div className="modal-dialog modal-sm">
                                     <h1 className="modal-content text-white">
@@ -61,6 +80,9 @@ class Resort extends React.Component {
                                     </h1>
                                 </div>
                             </div>     
+                    </div>  
+                                 
+                </div>
                 </div>
             </div>
     

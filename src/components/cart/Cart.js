@@ -4,6 +4,7 @@ import axios from 'axios';
 import {cartData} from './../../ducks/reducer';
 import StripeCheckout from 'react-stripe-checkout';
 import stripe from './../../Stripekey';
+import {withRouter} from 'react-router';
 
 
 class Cart extends Component {
@@ -21,6 +22,7 @@ class Cart extends Component {
             axios.put('/api/clearCart').then(
                 axios.get('/api/cartData').then(res => {
                     this.props.cartData(res.data)
+                    this.props.history.push('/home');
                 })
             )
 
@@ -102,4 +104,4 @@ function mapStateToProps(state){
         cart: state.cart
     }
 }
-export default connect(mapStateToProps, {cartData})(Cart)
+export default connect(mapStateToProps, {cartData})(withRouter(Cart));
