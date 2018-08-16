@@ -7,8 +7,10 @@ const bodyParser = require('body-parser');
 const ctlr = require('./controller');
 const config = require('./config')
 const stripe = require('stripe')(config.secret_key);
+const path = require('path');
 
 const app = express();
+app.use( express.static( `${__dirname}/../build` ) );
 app.use(bodyParser.json());
 const {
     CONNECTION_STRING,
@@ -91,6 +93,9 @@ let {sub, email, name, picture} = resWithUserData.data;
   app.post('/api/payment', ctlr.payment)
   app.put('/api/clearCart', ctlr.clearCart)
 
+  app.get('*', (req, res)=>{
+    res.sendFile(path.join(__dirname, '../build/index.html'));
+});
 
 massive(CONNECTION_STRING).then(db => {
     app.set('db', db);
