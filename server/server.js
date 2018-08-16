@@ -34,12 +34,13 @@ const {
 
 
 app.get('/auth/callback', async (req, res) => {
+    try{
             let payload = {
                 client_id: REACT_APP_CLIENT_ID,
                 client_secret: CLIENT_SECRET,
                 code: req.query.code,
                 grant_type: "authorization_code",
-                redirect_uri: `{process.env.PROTOCOL}://${req.headers.host}/auth/callback`
+                redirect_uri: `${process.env.PROTOCOL}://${req.headers.host}/auth/callback`
             }
             console.log(req.headers.host)
 
@@ -66,6 +67,9 @@ let {sub, email, name, picture} = resWithUserData.data;
             req.session.user = createUser[0];
             res.redirect('/#/home')
         };
+    }catch(err){
+        console.error(err);
+    }
     });
 
 
