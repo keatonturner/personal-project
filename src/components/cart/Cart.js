@@ -22,7 +22,7 @@ class Cart extends Component {
             axios.put('/api/clearCart').then(
                 axios.get('/api/cartData').then(res => {
                     this.props.cartData(res.data)
-                    this.props.history.push('/home');
+                    this.props.history.push('/thankyou');
                 })
             )
 
