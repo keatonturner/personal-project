@@ -7,6 +7,8 @@ import stripe from './../../Stripekey';
 import {withRouter} from 'react-router';
 
 
+
+
 class Cart extends Component {
     constructor(){
         super();
@@ -16,6 +18,8 @@ class Cart extends Component {
 
         }
     }
+  
+
     onToken = (token) => {
         token.card = void 0;
         axios.post('/api/payment', {token, amount: this.state.total}).then(
@@ -35,7 +39,9 @@ class Cart extends Component {
            this.props.cartData(res.data)
            this.updateTotal();
        })
-   }
+    }
+  
+
    deleteFromCart(e){
        axios.delete(`/api/resort/${e.id}`).then(res => {
            this.props.cartData(res.data)
@@ -64,35 +70,71 @@ class Cart extends Component {
   } 
 
     render(){
+        const styles = {width: '100vw', height: '100vh'} 
+       
+
         let displayCart = this.props.cart ? 
         this.props.cart.map((e, i) => {
             return(
-            <div key={i}>
-                
-                <h1>{e.resort}</h1>
-                <h3>Pass: {e.pass}</h3>
-                <h4>{`$${e.price}.00`}</h4>
-                <h4>Quantity: {e.quantity}</h4>
-                <input placeholder='quantity' onChange={e => this.handleQuantity(e.target.value)}/>
-                <button onClick={() => this.updateQuantity(e.id)}>Save Changes</button>
-                <button onClick={() => this.deleteFromCart(e)}>delete</button>
+          
+                    <tr className="bg-light text-dark border border-dark" key={i}>
+                        <td>{e.resort}</td>
+                        <td>{e.pass}</td>
+                        <td>{`$${e.price}.00`}</td>
+                        <td className="d-flex align-content-center">
+                        <form className="form-inline">
+                            <select className="custom-select my-sm-1 mr-sm-2" id="inlineFormCustomSelectPref" onChange={e => this.handleQuantity(e.target.value)}>
+                                <option value="0" selected>0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                            <button type="button" className="close" aria-label="Close" onClick={() => this.updateQuantity(e.id)}>
+                        <i className="far fa-check-circle display-5" onClick={() => this.updateQuantity(e.id)}></i> 
+                        </button>
+                        </form>                          
+                        </td>    
+                        <td>
+                        <button type="button" className="close" aria-label="Close" onClick={() => this.deleteFromCart(e)}>
+                        <i className="far fa-trash-alt display-5"></i>
+                        </button>                             
+                        </td>         
+                    </tr>
+                        
                     
-            </div>
+           
             ) 
-        }) : 'Your Cart Is Empty'
+        }) : <h1 className="text-light">'Your Cart Is Empty'</h1>
         return(
-            <div>
+            <div className="bg-dark " style={styles}>
+            <h1 className="bg-light text-dark" ><i class="fas fa-shopping-cart"></i>   Shopping Cart</h1>
             {displayCart[0] ? 
-            <div>
+            <table id="table" className="table table-hover table-borderless-top dt-responsive-sm dt-responsive-md dt-responsive-lg" style={{width: '100%'}} >
+            <thead>
+                    <tr className="text-light">
+                        <th>Resort</th>
+                        <th>Pass</th>
+                        <th>Price</th>
+                        <th colspan="2" >Quantity</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
                 {displayCart}
-                <h3>Total: ${this.state.total}.00</h3>
+                <tr className="bg-light text-dark">
+                <td colspan="2">Total:</td>
+                <td > ${this.state.total}.00</td>
+                <td colspan="2">
                 <StripeCheckout 
                     token={this.onToken}
                     stripeKey={stripe.pub_key}
                     amount={this.state.total * 100}
-                />
-            </div>
-             : <h1>Your Cart Is Empty</h1>}
+                />      
+                </td>
+                </tr>
+                </tbody>
+            </table>
+             : <h1 className="text-light">Your Cart Is Empty</h1>}
             </div>
 
         )

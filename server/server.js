@@ -9,6 +9,9 @@ const config = require('./config')
 const stripe = require('stripe')(config.secret_key);
 const path = require('path');
 
+
+
+
 const app = express();
 app.use( express.static( `${__dirname}/../build` ) );
 app.use(bodyParser.json());
@@ -20,7 +23,6 @@ const {
     REACT_APP_CLIENT_ID,
     CLIENT_SECRET
 } = process.env;
-
 
 
 
@@ -42,7 +44,7 @@ app.get('/auth/callback', async (req, res) => {
                 grant_type: "authorization_code",
                 redirect_uri: `${process.env.PROTOCOL}://${req.headers.host}/auth/callback`
             }
-            console.log(req.headers.host)
+           
 
         let resWithToken = await axios.post(
             `https://${REACT_APP_DOMAIN}/oauth/token`,
