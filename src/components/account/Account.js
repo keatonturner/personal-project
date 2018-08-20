@@ -18,7 +18,7 @@ axios.get('/api/user-data').then(res => {
     }
     render(){
         const bg = {width: "100%", height: "90vh"}
-        const img = {width: '50%'}
+        const img = {width: '35%'}
         const img2 = {height: '200px', width: '200px'}
         const logout = {height: '200px'}
         const bg5 = {alignItems: 'center',
@@ -34,17 +34,17 @@ axios.get('/api/user-data').then(res => {
                 <div className="bg-light d-flex  bd-highlight mb-3" style={img}>
                     <img src={user.picture}  alt='' className="img-thumbnail border border-dark mr-auto p-2 bd-highlight" style={img2} />
                     <div className="p-2 bd-highlight flex-column">
-                    <p className="p-2 bd-highlight "> Name: {user.user_name}</p>
-                    <p className="p-2 bd-highlight"> Email: {user.email}</p>                        
+                    <h4 className="p-2 bd-highlight "> Name: {user.user_name}</h4>
+                    <h4 className="p-2 bd-highlight"> Email: {user.email}</h4>                        
                     </div>
                     
                             
             </div>
-            <button className=" bg-dark btn btn-outline-light" style={img} onClick={() => this.logout()}>Logout</button>
+            <button className=" btn btn-outline-light" style={img} onClick={() => this.logout()}>Logout</button>
                 </div>
                 ) : <div>
                 <h1 className="text-light">Please Login.</h1>
-                <button className=" bg-dark btn btn-outline-light"  onClick={() => this.logout()}>Login</button>
+                <button className=" btn btn-outline-light"  onClick={() => this.logout()}>Login</button>
                 </div>
                 }
             </div>

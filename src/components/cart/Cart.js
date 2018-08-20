@@ -81,8 +81,8 @@ class Cart extends Component {
                         <td>{e.resort}</td>
                         <td>{e.pass}</td>
                         <td>{`$${e.price}.00`}</td>
-                        <td className="d-flex align-content-center">
-                        <form className="form-inline">
+                        <td className="">
+                        <form className="form-inline d-flex justify-content-center">
                             <select className="custom-select my-sm-1 mr-sm-2" id="inlineFormCustomSelectPref" onChange={e => this.handleQuantity(e.target.value)}>
                                 <option value="0" selected>0</option>
                                 <option value="1">1</option>
@@ -115,7 +115,8 @@ class Cart extends Component {
                         <th>Resort</th>
                         <th>Pass</th>
                         <th>Price</th>
-                        <th colspan="2" >Quantity</th>
+                        <th>Quantity</th>
+                        <th></th>
                         
                     </tr>
                 </thead>
