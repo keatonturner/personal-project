@@ -78,9 +78,9 @@ class Cart extends Component {
             return(
           
                     <tr className="bg-light text-dark border border-dark" key={i}>
-                        <td>{e.resort}</td>
-                        <td>{e.pass}</td>
-                        <td>{`$${e.price}.00`}</td>
+                        <td><h4>{e.resort}</h4></td>
+                        <td><h4>{e.pass}</h4></td>
+                        <td><h4>{`$${e.price}.00`}</h4></td>
                         <td className="">
                         <form className="form-inline d-flex justify-content-center">
                             <select className="custom-select my-sm-1 mr-sm-2" id="inlineFormCustomSelectPref" onChange={e => this.handleQuantity(e.target.value)}>
@@ -112,10 +112,10 @@ class Cart extends Component {
             <table id="table" className="table table-hover table-borderless-top dt-responsive-sm dt-responsive-md dt-responsive-lg" style={{width: '100%'}} >
             <thead>
                     <tr className="text-light">
-                        <th>Resort</th>
-                        <th>Pass</th>
-                        <th>Price</th>
-                        <th>Quantity</th>
+                        <th><h3>Resort</h3></th>
+                        <th><h3>Pass</h3></th>
+                        <th><h3>Price</h3></th>
+                        <th><h3>Quantity</h3></th>
                         <th></th>
                         
                     </tr>
@@ -123,8 +123,8 @@ class Cart extends Component {
                 <tbody>
                 {displayCart}
                 <tr className="bg-light text-dark">
-                <td colspan="2">Total:</td>
-                <td > ${this.state.total}.00</td>
+                <td colspan="2"><h4>Total:</h4></td>
+                <td><h4>${this.state.total}.00</h4></td>
                 <td colspan="2">
                 <StripeCheckout 
                     token={this.onToken}
