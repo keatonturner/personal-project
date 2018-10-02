@@ -6,7 +6,9 @@ module.exports = {
         const dbInstance = req.app.get('db');
 
         dbInstance.get_resorts().then(resorts => {
+            
             dbInstance.get_orderid(req.session.user.id)
+            
             .then(orders => {
                 if(orders[0]){
                     req.session.user.ordersid = orders[0].id

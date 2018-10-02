@@ -38,7 +38,8 @@ class Cart extends Component {
        axios.get('/api/cartData').then(res => {
            this.props.cartData(res.data)
            this.updateTotal();
-       })
+        })
+      
     }
   
 
@@ -46,7 +47,7 @@ class Cart extends Component {
        axios.delete(`/api/resort/${e.id}`).then(res => {
            this.props.cartData(res.data)
            this.setState({total: 0})
-           this.updateTotal()
+           this.updateTotal();
        })
    }
    updateQuantity(e){
@@ -54,11 +55,13 @@ class Cart extends Component {
            this.setState({quantity: 1})
            this.props.cartData(res.data);
            this.setState({total: 0});
-           this.updateTotal();
+           this.updateTotal()
+           
        })
    }
    handleQuantity(value){
        this.setState({quantity: value })
+       
    }
 
   updateTotal(){
@@ -68,9 +71,21 @@ class Cart extends Component {
      })
 
   } 
+  
 
     render(){
-        const styles = {width: '100vw', height: '100vh'} 
+        const styles = {width: '100vw', height: '100vh', display: 'flex',
+        justifyContent: 'center',
+         flexDirection: 'column' } 
+        const styles2 = {
+            height: '100vh',
+            width: '100%',
+             
+        }
+        const styles3 = {
+            height: '100vh',
+            width: '100%'
+        }
        
 
         let displayCart = this.props.cart ? 
@@ -83,8 +98,8 @@ class Cart extends Component {
                         <td><h4>{`$${e.price}.00`}</h4></td>
                         <td className="">
                         <form className="form-inline d-flex justify-content-center">
-                            <select className="custom-select my-sm-1 mr-sm-2" id="inlineFormCustomSelectPref" onChange={e => this.handleQuantity(e.target.value)}>
-                                <option value="0" selected>0</option>
+                            <select  className="custom-select my-sm-1 mr-sm-2" id="inlineFormCustomSelectPref" onChange={e => this.handleQuantity(e.target.value)}>
+                                <option value="0" >0</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -108,6 +123,8 @@ class Cart extends Component {
         return(
             <div className="bg-dark " style={styles}>
             <h1 className="bg-light text-dark" ><i class="fas fa-shopping-cart"></i>   Shopping Cart</h1>
+            <div style={styles2}>
+            <div styles={styles3}>
             {displayCart[0] ? 
             <table id="table" className="table table-hover table-borderless-top dt-responsive-sm dt-responsive-md dt-responsive-lg" style={{width: '100%'}} >
             <thead>
@@ -136,6 +153,10 @@ class Cart extends Component {
                 </tbody>
             </table>
              : <h1 className="text-light">Your Cart Is Empty</h1>}
+            </div>
+                
+            </div>
+                
             </div>
 
         )

@@ -16,13 +16,13 @@ class Resort extends React.Component {
 
     componentDidMount(){
         axios.get(`/api/resort/${this.props.match.params.id}`).then(res => {
-            console.log(res.data)
+            
             this.setState({resort: res.data})
         })
     }
     addToCartDayPass(e){
         axios.post('/api/addToCart', {price: e.daypass, pass: 'Day', id: this.props.match.params.id}).then(res => {
-            console.log(res)
+            
         })
     }
     addToCartSeasonPass(e){
@@ -57,7 +57,7 @@ class Resort extends React.Component {
                         <h4 className="p-2 flex-fill bd-highlight text-dark " >{`$${e.daypass}.00`}</h4>
                     </div>
                         <button type="button" className="btn btn-light btn-sm text-dark border-5 border-dark" data-toggle="modal" data-target=".bd-example-modal-sm" onClick={() => this.addToCartDayPass(e)}>Add To Cart</button> 
-                            <div className="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                            <div className="modal fade bd-example-modal-sm" tabIndex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
                                 <div className="modal-dialog modal-sm">
                                     <h1 className="modal-content">
                                     Added To Cart
@@ -73,7 +73,7 @@ class Resort extends React.Component {
                         <h4 className="p-2 flex-fill bd-highlight text-dark"> {`$${e.seasonpass}.00`}</h4>
                     </div>
                         <button type="button" className="btn btn-light btn-sm text-dark border-5 border-dark" data-toggle="modal" data-target=".bd-example-modal-sm" onClick={() => this.addToCartSeasonPass(e)}>Add To Cart</button>   
-                            <div className="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                            <div className="modal fade bd-example-modal-sm" tabIndex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
                                 <div className="modal-dialog modal-sm">
                                     <h1 className="modal-content text-white">
                                     Added To Cart

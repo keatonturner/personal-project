@@ -1,0 +1,156 @@
+.slide{
+    width: 100%;
+    height: 100vh;
+
+    
+}
+.inner-slide{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-image: url('https://attentionmedia.se/wp-content/uploads/2017/11/white-background-4.jpg');
+}
+.home-content{
+    width: 50%;
+    height: 100vh;
+}
+.home-inner{
+    width: 100%;
+    height: 15vh;
+    border-radius: 70px;
+    box-shadow: 1px 1px 3px 2px rgba(0,0,0,0.1), 1px 1px 3px 2px rgba(0,0,0,0.2);
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url('https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-575325.jpg');
+    object-fit: cover;
+    background-position: center;
+
+}
+.home-big{
+    width: 100%;
+    height: 70vh;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px 1px rgba(0,0,0,0.1), 0 1px 2px 1px rgba(0,0,0,0.2);
+    margin: 20px;
+}
+.bindings-1{
+    width: 50%;
+    margin-bottom: 10px;
+}
+.bindings-2{
+    width: 50%;
+    margin-bottom: 10px;
+}
+.outer-img{
+    width: 100%;
+    height: 100%;
+}
+.home-img{
+    width: 95%;
+    height: 53vh;
+    object-fit: cover;
+    border: 2px solid gray;
+}
+.contact{
+    height: 100vh;
+    width: 100%;
+    background: radial-gradient(circle , gray, black);
+    color: white;
+
+    
+}
+.contact-h1{
+    padding-top: 3%;
+    text-decoration: underline;
+    color: gray
+
+}
+p{
+    color: gray;
+}
+.outer-name{
+    width: 100%;
+    height: 70vh;
+margin-top: 3%;
+
+
+}
+.name-email{
+    width: 100%;
+    height: 40vh;
+}
+.email-name{
+    width: 100%;
+    height: 13vh;
+    display: flex;
+    justify-content: center;
+}
+.message-outer{
+    width: 40%;
+}
+.home-name{
+    width: 15%;
+}
+.home-email{
+    width: 15%;
+}
+.outer-message{
+    display: flex;
+    justify-content: center;
+}
+.home-message{
+    width: 30%;
+}
+.input-name{
+    width: 98%;
+    border-radius: 12px;
+    border: 3px solid gray;
+}
+.input-email{
+    width: 98%;
+    border-radius: 12px;
+    border: 3px solid gray;
+}
+.input-message{
+    width: 100%;
+    height: 15vh;
+    border-radius: 12px;
+   border: 3px solid gray;
+    
+    
+}
+.h3-name{
+    float: left;
+    color: gray;
+}
+.submit{
+    width: 30%;
+    border-radius: 12px;
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+}
+.submit:hover{
+    border: 2px solid gray;
+    background-color: white;
+    color: gray;
+
+}
+.p-tag{
+    font-family: 'Charmonman', cursive;
+    
+}
+.h1-tag{
+    height: 15%;
+    font-family: 'Charmonman', cursive;
+    padding-top: 5%;
+    font-size: 170%;
+
+}
+i{
+    margin-right: 5px;
+    margin-left: 5px;
+}

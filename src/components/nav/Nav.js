@@ -6,7 +6,9 @@ import {withRouter} from 'react-router';
 
 
 function Nav(props){
-    const NavBar = {textDecoration: 'none', color: 'white', fontSize: '25px'}
+    const bg = {background: 'linear-gradient(to left, #333, #333 50%, #eee 80%, #333 80%)'}
+    const font = {fontFamily: 'Courgette, cursive'}
+    const NavBar = {textDecoration: 'none', color: 'white', fontSize: '25px', background: 'linear-gradient(to left, #333, #333 40%, gray 50%, #333 70%)'}
     const {location} = props;
     if(location.pathname === '/'){
         return ''
@@ -16,13 +18,13 @@ function Nav(props){
         <nav className='nav nav-pills nav-justified navbar navbar-expand-md navbar-dark bg-dark'  style={NavBar} >
         <div className='nav navbar' >
         
-            <h1 className="text-light"><i class="fas fa-snowflake"></i>   We Ski Utah</h1>     
+            <h1 className="text-light" style={font}><i className="fas fa-snowflake"></i>   We Ski Utah</h1>     
         </div>
         <div className='nav-item nav justify-content-end ' style={{color: 'white'}}>
-            <Link className='nav-link text-light' to='/home' >Home</Link>  
-            <Link className='nav-link text-light' to='/resorts' >Resorts</Link>      
-            <Link className='nav-link text-light' to='/cart' >Cart</Link>                   
-            <Link className='nav-link text-light' to='/account'>Account</Link>            
+            <Link className='nav-link text-light' style={font} to='/home' >Home</Link>  
+            <Link className='nav-link text-light' style={font} to='/resorts' >Resorts</Link>      
+            <Link className='nav-link text-light' style={font} to='/cart' >Cart</Link>                   
+            <Link className='nav-link text-light' style={font} to='/account'>Account</Link>            
         </div>
         </nav>
         

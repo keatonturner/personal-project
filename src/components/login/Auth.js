@@ -12,6 +12,9 @@ login(){
 }
 
     render(){
+        const bg = {background: 'radial-gradient(circle , gray, black)'}
+        const bg1 = {background: 'radial-gradient(circle , black, gray)'}
+        const font = {fontFamily: 'Courgette, cursive'}
         const jumbotron = {
             backgroundImage: 'url(http://theknow.denverpost.com/wp-content/uploads/2017/10/SPRINGSKIINGA-1080x754.jpg)',
             backgroundSize: 'cover',
@@ -21,12 +24,13 @@ login(){
             bottom: '0',
             height: '100vh',
             display: 'flex',
-           alignItems: 'center'}
+           alignItems: 'center',
+        }
         return (
     <div className='jumbotron border border-dark d-flex justify-content-center ' style={jumbotron}>
-        <div className="container-md border border-light shadow-lg p-3 mb-5 bg-dark rounded">
-        <i class="fas fa-snowflake display-4 text-light"></i> 
-                    <h1 className="display-4 text-light font-weight-bold"> We Ski Utah</h1>  
+        <div className="container-md border border-light shadow-lg p-3 mb-5 bg-dark rounded" style={bg}>
+        <i className="fas fa-snowflake display-4 text-light"></i> 
+                    <h1 className="display-4 text-light font-weight-bold" style={font} > We Ski Utah</h1>  
                     <hr />
                     <button className='btn btn-outline-light btn-lg' type='button' onClick={() => this.login()}>Login</button>    
         </div>       
