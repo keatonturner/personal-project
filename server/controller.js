@@ -79,7 +79,7 @@ dbInstance.join_all([req.session.user.ordersid]).then(res => res.status(200).sen
     },
     quantity: (req, res) => {
         const dbInstance = req.app.get('db')
-        dbInstance.quantity([req.body.quantity, req.body.id, req.session.user.ordersid])
+        dbInstance.quantity([req.query.quantity, req.params.id, req.session.user.ordersid])
         .then(() => {
             dbInstance.join_all([req.session.user.ordersid])
             .then(resort => res.status(200).send(resort))

@@ -1,0 +1,76 @@
+.resort-bg{
+width: 100%;
+height: 100vh;
+display: flex;
+justify-content: center;
+background-image: url('https://www.e-zrentacar.com/wp-content/uploads/2017/06/xski3-1200x800.jpeg');
+background-position: center;
+background-size: cover;
+}
+.resort-outer{
+width: 50%;
+height: 100vh;
+}
+.outer-bg{
+    width: 100%;
+    height: 25vh; 
+    -webkit-box-shadow: 0px 0px 12px 6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 12px 6px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 12px 6px rgba(0,0,0,0.75);
+    margin-top: 30px;
+    background-color: white;
+}
+.resort-box{
+    width: 100%;
+    
+}
+.address-box{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+.city-box{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    
+}
+.outer-pass{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.outer-day{
+    width: 45%;
+    height: 25vh;
+    -webkit-box-shadow: 0px 0px 12px 6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 12px 6px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 12px 6px rgba(0,0,0,0.75);
+    margin-top: 30px;
+    background-color: white;
+}
+.outer-season{
+    width: 45%;
+    height: 25vh;
+    -webkit-box-shadow: 0px 0px 12px 6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 12px 6px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 12px 6px rgba(0,0,0,0.75);
+    margin-top: 30px;
+    background-color: white;
+
+}
+.price{
+    width: 100%;
+    height: 8vh;
+    margin-top: 35px;
+    display: flex;
+    justify-content: space-around;
+}
+.season-name{
+    margin-top: 15px;
+    font-family: 'Courgette', cursive;
+}
+.names{
+    font-family: 'Courgette', cursive;
+}

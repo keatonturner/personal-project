@@ -1,0 +1,103 @@
+.cart-bg{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-image: url('https://i0.wp.com/www.snowsbest.com/wp-content/uploads/2016/08/whistler_skiing.jpg?fit=3871%2C2576&ssl=1');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.outer-cart{
+    width: 75%;
+    height: 100%;
+}
+.box-cart{
+    width: 100%;
+    height: 75%;
+    -webkit-box-shadow: 0px 0px 12px 6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 12px 6px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 12px 6px rgba(0,0,0,0.75);
+    margin: 20px;
+}
+.cart-logo{
+    width: 30%;
+    height: 7%;
+    border-bottom: 1px solid black;
+    background-color: white;
+    border-radius: 35px;
+    margin-left: 35%;
+}
+.cart-names{
+  width: 98%;
+  height: 7%;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  border: 1px solid black;  
+  background-color: white;
+  border-radius: 35px;
+  margin: 15px;
+}
+.cart-items{
+    width: 100%;
+    height: 45vh;
+    border-bottom: 1px solid black;
+    overflow: scroll;
+}
+.item{
+    width: 98%;
+    height: 7vh;
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid black;
+    align-items: center;
+    margin: 15px;
+    border-radius: 35px;
+    background-color: white;
+}
+.item-resort{
+    width: 24%;
+
+}
+.item-pass{
+    width: 20%;
+
+}
+.item-price{
+    width: 22%
+}
+.item-quantity{
+    width: 20%;
+}
+.total-box{
+    width: 100%;
+    height: 13vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.total-inner{
+    width: 30%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    border-radius: 50px;
+}
+button{
+    border: none;
+}
+.font{
+    font-size: 2vh;
+    font-family: 'Courgette', cursive;
+}
+.stripe{
+    height: 4vh;
+}
+.font-cart{
+    font-size: 3.5vh;
+    font-family: 'Courgette', cursive;
+}

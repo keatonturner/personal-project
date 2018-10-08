@@ -7,6 +7,7 @@ import './Home.css';
 
 
 
+
 class Home extends Component {
   constructor(){
     super();
@@ -34,12 +35,14 @@ class Home extends Component {
             [prop]: val
       })
     }
+     
 
     render(){
       
         return(
-        <div className='.slide'>
-          <div className='inner-slide'>
+        <div  className='.slide'>
+
+          <div className='count-particles'>
             <div className='home-content'>
               <div className='home-inner'>
               <div className='bindings-1'>
@@ -58,7 +61,7 @@ class Home extends Component {
                   <hr />
                   <div className='outer-img'>
 
-                  <img className='home-img'  src='http://wasir123.info/wp-content/uploads/mountain-ropeway-ski-resort-2-skiing-desktop-wallpapers-5.jpg' alt=''/>
+                  <img className='home-img'  src='https://images.unsplash.com/photo-1465220183275-1faa863377e3?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4522f2cfd26358642b9458f52c5b01d7&auto=format&fit=crop&w=1267&q=80' alt=''/>
                   </div>
               </div>
               
@@ -91,7 +94,14 @@ class Home extends Component {
                   </div>
             
                 </div>
-                    <button className='submit' onClick={() => this.Submit()}>Submit</button>
+                <button type="button" className="btn btn-light btn-sm text-dark border-5 border-dark" data-toggle="modal" data-target=".bd-example-modal-sm" onClick={() => this.Submit()}>Add To Cart</button> 
+                            <div className="modal fade bd-example-modal-sm" tabIndex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                                <div className="modal-dialog modal-sm">
+                                    <h1 className="modal-content">
+                                    Your Message Has Been Sent!
+                                    </h1>
+                                </div>
+                            </div> 
 
               </div>
             </div>  

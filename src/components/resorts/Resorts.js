@@ -2,35 +2,34 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {updateResorts} from './../../ducks/reducer';
 import {Link} from 'react-router-dom';
+import './../resorts/Resorts.css'
 
 
 class Resorts extends Component {
     render(){
-        const styler = {width:"450px", textDecoration: "none"}
-        const bg = {
-            backgroundImage:"url(http://justfunfacts.com/wp-content/uploads/2017/01/snow.gif)", 
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            position: 'relative',
-            top: '0',
-            bottom: '0',
-            height: '100%'
-        }
+        
         let resortList = this.props.resorts.map((e, i) => {
             return(
-               
-                    <div key={i} className="d-flex justify-content-center" >
-                        <ul className="list-group d-flex p-2 bd-highlight bg-transparent" ><Link className="text-light" to={`/resort/${e.id}`}><h3 className="list-group-item shadow-lg p-2 mb-0 bg-dark rounded font-weight-bold border-3 border-light" style={styler}>{e.resort}</h3></Link></ul>
-                    </div>
-              
-               
+                        <ul className="resorts-list" key={i}>
+                            <i className="far fa-circle"></i>
+                                <Link className="link" to={`/resort/${e.id}`}>
+                                    <h4 className="resort-name" >{e.resort}</h4>
+                                </Link>
+                        </ul>
             )
         })
         return(
-            <div style={bg} >
-                <h1 className="text-light bg-dark border border-light">Utah Resorts</h1>
-                <hr />
-                {resortList}
+            <div className='outest' >
+                <div className='inner'>
+                    <div className='outest-title'>
+                        <div className='outer-title'>
+                            <h1 className=" title">Utah Resorts</h1>
+                        </div>  
+                    </div>
+                    <div className='list'>
+                        {resortList}
+                    </div>
+                </div>
             </div>
         )
     }

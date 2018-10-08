@@ -25,6 +25,7 @@ login(){
             height: '100vh',
             display: 'flex',
            alignItems: 'center',
+           borderRadius: '0'
         }
         return (
     <div className='jumbotron border border-dark d-flex justify-content-center ' style={jumbotron}>

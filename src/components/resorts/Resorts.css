@@ -1,0 +1,89 @@
+.outest{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(0deg, black, white);
+    /* background-image: url('https://www.stockvault.net/data/2013/08/19/147273/preview16.jpg'); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.inner{
+    width: 50%;
+    height: 80vh;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 12px 6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 12px 6px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 12px 6px rgba(0,0,0,0.75);
+    margin: 35px;
+    background-image: url('https://images.pexels.com/photos/129733/pexels-photo-129733.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.outest-title{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+.outer-title{
+    width: 40%;
+    margin: 25px;
+    background-image: radial-gradient(circle at 50% , rgb(250, 248, 246), rgba(247, 204, 111, 0.986) );
+    -webkit-box-shadow: 0px 0px 12px 6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 12px 6px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 12px 6px rgba(0,0,0,0.75);
+    display: flex;
+    justify-content: center;
+}
+.list{
+    height: 65vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.resorts-list{
+    width: 45%;
+    height: 5vh;
+    background-image: radial-gradient(circle at 50% , rgb(250, 248, 246), rgba(247, 204, 111, 0.986) );
+    border-radius: 60px;
+    -webkit-box-shadow: 0px 0px 12px 6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 12px 6px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 12px 6px rgba(0,0,0,0.75);
+    display: flex;
+    align-items: center;
+}
+.link{
+    text-decoration: none;
+}
+.link:hover{
+    text-decoration: none;
+}
+.resort-name{
+    font-size: 2.1vh;
+    color: black;
+    text-decoration: none;
+    font-family: 'Courgette', cursive;
+}
+.title{
+    font-family: 'Courgette', cursive;
+}
+.resort-name:hover{
+    text-decoration: none;
+    color: white;
+}
+.resorts-list:hover{
+    background-image: none;
+    background-color: black;
+    border: 1px solid white;
+}
+.fa-circle {
+    color: white;
+    margin-right: 10px;
+}

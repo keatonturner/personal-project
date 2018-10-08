@@ -142,7 +142,7 @@ let {sub, email, name, picture} = resWithUserData.data;
   app.get('/api/cartData', ctlr.cartResorts)
   app.post('/api/addToCart', ctlr.addToCart)
   app.delete('/api/resort/:id', ctlr.deleteFromCart)
-  app.put('/api/quantity', ctlr.quantity)
+  app.put('/api/quantity/:id', ctlr.quantity)
   app.post('/api/payment', ctlr.payment)
   app.put('/api/clearCart', ctlr.clearCart)
 
