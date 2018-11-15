@@ -14,18 +14,29 @@ function Nav(props){
     } else {
 
     return(
-        <nav className='nav nav-pills nav-justified navbar navbar-expand-md navbar-dark bg-dark'  style={NavBar} >
-        <div className='nav navbar' >
-        
-            <h1 className="text-light" style={font}><i className="fas fa-snowflake"></i>   We Ski Utah</h1>     
+  
+        <div className="pos-f-t">
+            <div className="collapse" id="navbarToggleExternalContent">
+                <div className="bg-dark d-flex p-4 border-bottom border-light">
+                    <div className='w-100 d-flex flex-column justify-content-center '>
+                        <Link className='nav-link text-dark w-25 bg-light m-1 w-100' style={font} to='/home' ><i className="fas fa-snowflake" />{' '}Home</Link>  
+                        <Link className='nav-link text-dark w-25 bg-light m-1 w-100' style={font} to='/resorts' ><i className="fas fa-snowflake" />{' '}Resorts</Link>      
+                        <Link className='nav-link text-dark w-25 bg-light m-1 w-100' style={font} to='/cart' ><i className="fas fa-snowflake" />{' '}Cart</Link>                   
+                        <Link className='nav-link text-dark w-25 bg-light m-1 w-100' style={font} to='/account'><i className="fas fa-snowflake" />{' '}Account</Link>     
+                    </div>
+                </div>
+            </div>
+                <nav className="navbar navbar-dark d-flex flex-row justify-content-between bg-dark">
+                <div>
+                    <h2 className="text-light" style={font}><i className="fas fa-snowflake"></i>We Ski Utah</h2> 
+                </div>
+                <div>
+                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                </nav>
         </div>
-        <div className='nav-item nav justify-content-end ' style={{color: 'white'}}>
-            <Link className='nav-link text-light' style={font} to='/home' >Home</Link>  
-            <Link className='nav-link text-light' style={font} to='/resorts' >Resorts</Link>      
-            <Link className='nav-link text-light' style={font} to='/cart' >Cart</Link>                   
-            <Link className='nav-link text-light' style={font} to='/account'>Account</Link>            
-        </div>
-        </nav>
         
             
        

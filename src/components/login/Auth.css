@@ -1,0 +1,73 @@
+.auth-bg{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('http://theknow.denverpost.com/wp-content/uploads/2017/10/SPRINGSKIINGA-1080x754.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#auth-card{
+    height: 60vh;
+    width: 60%;
+    background-color: white;
+    opacity: 0.5;
+    -webkit-box-shadow: 2px 3px 20px 14px rgba(0,0,0,0.75);
+    -mos-box-shadow: 2px 3px 20px 14px rgba(0,0,0,0.75);
+    box-shadow: 2px 3px 20px 14px rgba(0,0,0,0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 3px solid black;
+}
+#auth-title{
+    font-family: 'Courgette', cursive; 
+    color: white; 
+    font-size: 60px;
+    
+}
+#flex-btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#login-btn{
+    width: 70%;
+    height: 60px;
+    background: black;
+    opacity: 1.0;
+    border: 2px solid white;
+    font-family: 'Courgette', cursive;
+    font-size: 30px;
+    color: white;
+    border-radius: 30px;
+   
+}
+#border-bg{
+    width: 90%;
+    height: 52vh;
+    background: black;
+    opacity: 1.0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+
+
+
+@media (max-width: 700px){
+   #auth-card{
+       width: 95%;
+   }
+}
+@media (max-width: 500px){
+    #auth-title{
+        font-size: 40px;
+    }
+}

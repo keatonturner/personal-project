@@ -89,12 +89,12 @@ class Home extends Component {
                   <div className='outer-message'>
                   <div className='home-message'>
                     <h3 className='h3-name'>Message:</h3>
-                    <input className='input-message' onChange={(e) => this.onChange('message', e.target.value)}/>
+                    <textarea className='input-message' onChange={(e) => this.onChange('message', e.target.value)}/>
                   </div>
                   </div>
             
                 </div>
-                <button type="button" className="btn btn-light btn-sm text-dark border-5 border-dark" data-toggle="modal" data-target=".bd-example-modal-sm" onClick={() => this.Submit()}>Add To Cart</button> 
+                <button type="button" className="btn  btn-sm text-light bg-transparent m-3 w-50 border-5 border-light" data-toggle="modal" data-target=".bd-example-modal-sm" onClick={() => this.Submit()}>Submit</button> 
                             <div className="modal fade bd-example-modal-sm" tabIndex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
                                 <div className="modal-dialog modal-sm">
                                     <h1 className="modal-content">
