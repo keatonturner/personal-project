@@ -18,7 +18,7 @@
     -webkit-box-shadow: 0px 0px 12px 6px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 12px 6px rgba(0,0,0,0.75);
     box-shadow: 0px 0px 12px 6px rgba(0,0,0,0.75);
-    margin: 20px;
+    margin-top: 20px;
 }
 .cart-logo{
     width: 30%;
@@ -57,7 +57,7 @@
     background-color: white;
 }
 .item-resort{
-    width: 24%;
+    width: 30%;
 
 }
 .item-pass{
@@ -94,10 +94,42 @@ button{
     font-size: 2vh;
     font-family: 'Courgette', cursive;
 }
+.fonts{
+    font-size: 2vh;
+    font-family: 'Courgette', cursive;
+    width: 50%;
+    height: 
+}
 .stripe{
     height: 4vh;
 }
 .font-cart{
     font-size: 3.5vh;
     font-family: 'Courgette', cursive;
+}
+.trash-btn {
+    background: transparent;
+    border-radius: 50%;
+}
+@media (max-width: 1000px){
+    .cart-logo{
+        width: 100%;
+        margin-left: 0;
+    }
+    .cart-names{
+        margin: 0;
+        width: 100%;
+        margin-top: 15px;
+    }
+    .item{
+        margin: 0;
+        width: 100%;
+        margin-top: 10px;
+    }
+    .outer-cart{
+        width: 95%;
+    }
+    .total-inner{
+        width: 70%;
+    }
 }

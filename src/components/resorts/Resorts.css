@@ -1,6 +1,6 @@
 .outest{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     background-image: linear-gradient(0deg, black, white);
@@ -86,4 +86,27 @@
 .fa-circle {
     color: white;
     margin-right: 10px;
+}
+@media (max-width: 1075px){
+    .inner{
+        width: 90%;
+        height: auto;
+    }
+    .list{
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .resorts-list{
+        width: 90%;
+        height: 6vh;
+    }
+}
+@media (max-width: 750px){
+    .outer-title{
+        width: 90%;
+    }
 }

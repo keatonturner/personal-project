@@ -78,13 +78,13 @@ class Cart extends Component {
                         <h4 className='font'>{`$${e.price}.00`}</h4>  
                     </div>
                         <div className="item-quantity">
-                            <select  className='font' value={e.quantity} onChange={event => this.handleQuantity(e.id,  event.target.value)}>
+                            <select  className='fonts' value={e.quantity} onChange={event => this.handleQuantity(e.id,  event.target.value)}>
                                 <option value='1' >1</option>
                                 <option value='2'>2</option>
                                 <option value='3'>3</option>
                             </select>
                         </div>
-                        <button type="button" onClick={() => this.deleteFromCart(e)}>
+                        <button className='trash-btn' type="button" onClick={() => this.deleteFromCart(e)}>
                         <i className="far fa-trash-alt display-5"></i>
                         </button>                             
                                  

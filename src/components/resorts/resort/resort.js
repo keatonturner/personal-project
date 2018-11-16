@@ -41,25 +41,24 @@ class Resort extends React.Component {
             <div className='resort-outer'>
                 <div className='outer-bg'>
                     <div className='resort-box'>
-                        <h1 className="names">{e.resort}</h1>
+                        <h1 className="names1">{e.resort}</h1>
                         
                     </div>
                     <hr/>
                     <div className='address-box'>
-                        <h2 className="names">Address:</h2>
+                        <h3 className="names">Address:</h3>
                         <h4 className="names">{e.address}</h4>                    
                     </div>
                     <hr/>
                     <div className='city-box'>
-                        <h2 className="names">City:</h2>
+                        <h3 className="names">City:</h3>
                         <h4 className="names"> {e.city}</h4>               
                     </div>
                 </div>
                 <div className='outer-pass'>
                 <div className='outer-day'>
-                        <h2 className="season-name">Day Pass</h2> 
+                        <h3 className="season-name">Day Pass</h3> 
                         <div className='price'>
-                        <h3 className="names">Price:</h3>
                         <h4 className="names" >{`$${e.daypass}.00`}</h4>
                             
                         </div>    
@@ -76,9 +75,8 @@ class Resort extends React.Component {
                 
                    <div className='outer-season'>
 
-                        <h2 className="season-name" >Season Pass</h2>
+                        <h3 className="season-name" >Season Pass</h3>
                         <div className='price'>
-                        <h3 className="names">Price:</h3>
                         <h4 className="names"> {`$${e.seasonpass}.00`}</h4>  
                         </div>
                         <button type="button" className="btn btn-light btn-sm text-dark border-5 border-dark" data-toggle="modal" data-target=".bd-example-modal-sm" onClick={() => this.addToCartSeasonPass(e)}>Add To Cart</button>   
