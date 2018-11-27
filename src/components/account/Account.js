@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import axios from 'axios';
 import { connect } from 'react-redux';
 import { updateUserData } from '../../ducks/reducer';
+import './Account.css';
 
 
  class Account extends Component {
@@ -17,38 +18,29 @@ axios.get('/api/user-data').then(res => {
         })
     }
     render(){
-        const bg = {width: "100%", height: "90vh"}
-        const img = {width: '40%'}
-        const img2 = {height: '200px', width: '200px'}
-        const logout = {height: '200px'}
-        const bg5 = {alignItems: 'center',
-            flexDirection: 'column'}
         const {user} = this.props;
         return(
-            <div className="bg-light" style={bg}>
-                <h1 className="text-dark bg-light">Account Information</h1>
-                {
-                    user.user_name ? (
-            <div className="d-flex justify-content-center " style={bg5} >
-                <div className = "bg-light d-flex  bd-highlight mb-3 border border-dark"
-                style = {
-                    img
-                } >
-                    <img src={user.picture}  alt='' className="img-thumbnail border border-dark mr-auto p-2 bd-highlight" style={img2} />
-                    <div className="p-2 bd-highlight flex-column">
-                    <h4 className="p-2 bd-highlight "> Name: {user.user_name}</h4>
-                    <h4 className="p-2 bd-highlight"> Email: {user.email}</h4>                        
+            <div className="bg-back" >
+                    {user.user_name ? (
+                <div className="prof-bg" >
+                    <div className='bord-img'>
+                        <img src={user.picture}  alt='' className="prof-img"  /> 
                     </div>
-                    
-                            
-            </div>
-            <button className=" btn btn-outline-dark" style={img} onClick={() => this.logout()}>Logout</button>
+                    <hr />
+                    <div>
+                        <h4 style={{textDecoration: 'underline'}}>Username</h4>
+                        <h5 className="username"> {user.user_name}</h5>
+                    </div>
+                    <div>
+                        <h4 style={{textDecoration: 'underline'}}>Email </h4>
+                        <h5 className="email"> {user.email}</h5>                                 
+                    </div>
+                    <button className="logout-btn" onClick={() => this.logout()}>Logout</button>
                 </div>
-                ) : <div>
-                <h1 className="text-dark">Please Login.</h1>
-                <button className=" btn btn-outline-dark"  onClick={() => this.logout()}>Login</button>
-                </div>
-                }
+            ) : <div className='l-bg'>
+                    <h1 className="login-tag">Please Login.</h1>
+                    <button className="logout-btn"  onClick={() => this.logout()}>Login</button>
+                </div>}
             </div>
         )
     }

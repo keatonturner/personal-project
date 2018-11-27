@@ -1,120 +1,143 @@
-.resort-bg{
-width: 100%;
-height: 100vh;
-display: flex;
-justify-content: center;
-background-image: url('https://www.e-zrentacar.com/wp-content/uploads/2017/06/xski3-1200x800.jpeg');
-background-position: center;
-background-size: cover;
-}
-.resort-outer{
-width: 50%;
-height: 100vh;
-}
-.outer-bg{
+.resort-bg {
     width: 100%;
-    height: auto; 
-    -webkit-box-shadow: 0px 0px 12px 6px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 12px 6px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 12px 6px rgba(0,0,0,0.75);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-image: url('https://www.e-zrentacar.com/wp-content/uploads/2017/06/xski3-1200x800.jpeg');
+    background-position: center;
+    background-size: cover;
+}
+
+.resort-outer {
+    width: 50%;
+    height: 100vh;
+}
+
+.outer-bg {
+    width: 100%;
+    height: auto;
+    -webkit-box-shadow: 0px 0px 12px 6px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 12px 6px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 12px 6px rgba(0, 0, 0, 0.75);
     margin-top: 30px;
     background-color: white;
     padding: 20px;
 }
-.resort-box{
+
+.resort-box {
     width: 100%;
-    
+
 }
-.address-box{
+
+.address-box {
     width: 100%;
     display: flex;
     justify-content: space-around;
     margin-top: 15px;
 }
-.city-box{
+
+.city-box {
     width: 100%;
     display: flex;
     justify-content: space-around;
-    
+
 }
-.outer-pass{
+
+.outer-pass {
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
-.outer-day{
+
+.outer-day {
     width: 45%;
     height: auto;
-    -webkit-box-shadow: 0px 0px 12px 6px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 12px 6px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 12px 6px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 12px 6px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 12px 6px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 12px 6px rgba(0, 0, 0, 0.75);
     margin-top: 30px;
     background-color: white;
     padding: 20px;
 }
-.outer-season{
+
+.outer-season {
     width: 45%;
     height: auto;
-    -webkit-box-shadow: 0px 0px 12px 6px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 12px 6px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 12px 6px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 12px 6px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 12px 6px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 12px 6px rgba(0, 0, 0, 0.75);
     margin-top: 30px;
     background-color: white;
     padding: 20px;
 
 }
-.price{
+
+.price {
     width: 100%;
     height: 8vh;
     margin-top: 35px;
     display: flex;
     justify-content: space-around;
 }
-.season-name{
+
+.season-name {
     margin-top: 15px;
     font-family: 'Courgette', cursive;
     text-decoration: underline;
 }
-.names1{
+
+.names1 {
     text-decoration: underline;
     font-family: 'Courgette', cursive;
 }
-.names{
+
+.names {
     font-family: 'Courgette', cursive;
 }
+
 @media (max-width: 1050px) {
-    .names1{
+    .names1 {
         font-size: 30px;
         text-decoration: underline;
     }
-    .season-name{
+
+    .season-name {
         font-size: 25px;
         text-decoration: underline;
     }
-    .resort-outer{
+
+    .resort-outer {
         width: 80%;
     }
 }
-@media (max-width: 650px){
-    .resort-outer{
+
+@media (max-width: 650px) {
+    .resort-outer {
         width: 96%;
     }
-    .outer-bg{
+
+    .outer-bg {
         opacity: 0.6;
     }
-    .outer-day{
-        opacity: 0.6;
+
+    .outer-day {
+        opacity: 1.0;
+        /* z-index: 2; */
     }
-    .outer-season{
-        opacity: 0.6;
+
+    .outer-season {
+        opacity: 1.0;
     }
-    .names1{
+
+    .names1 {
         font-size: 20px;
     }
-    .names{
+
+    .names {
         font-size: 15px;
     }
-    .season-name{
+
+    .season-name {
         font-size: 20px;
     }
 

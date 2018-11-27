@@ -31,7 +31,6 @@ class Resort extends React.Component {
 
         })
     }
-   
 
 
     render(){ 
@@ -56,25 +55,43 @@ class Resort extends React.Component {
                     </div>
                 </div>
                 <div className='outer-pass'>
-                <div className='outer-day'>
+                    <div className='outer-day'>
                         <h3 className="season-name">Day Pass</h3> 
                         <div className='price'>
-                        <h4 className="names" >{`$${e.daypass}.00`}</h4>
-                            
-                        </div>    
-                        <button type="button" className="btn btn-light btn-sm text-dark border-5 border-dark" data-toggle="modal" data-target=".bd-example-modal-sm" onClick={() => this.addToCartDayPass(e)}>Add To Cart</button> 
-                            <div className="modal fade bd-example-modal-sm" tabIndex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-                                <div className="modal-dialog modal-sm">
-                                    <h1 className="modal-content">
-                                    Added To Cart
-                                    </h1>
+                        <h4 className="names" >{`$${e.daypass}.00`}</h4> 
+                    </div>    
+                        <button 
+                            type="button" 
+                            className="btn btn-light btn-sm text-dark border-5 border-dark" 
+                            data-toggle="modal" 
+                            data-target=".bd-modal-sm" 
+                            onClick={() => this.addToCartDayPass(e)}>
+                            Add To Cart
+                        </button> 
+                            <div id='Modal' 
+                                className="modal fade bd-modal-sm" 
+                                focus='true'  
+                                role="dialog"
+                                tabIndex='-1'  
+                                aria-labelledby="mySmallModalLabel" 
+                                style={{top:'25%', width: '100%', height: 'auto'}}>
+                                <div className='modal-dialog modal-sm' role='document' >
+                                    <div className='modal-content d-flex flex-row justify-content-between'>
+                                        <div className="modal-header">
+                                            <h2 className="modal-title">Added To Cart</h2>
+                                        </div>
+                                        <div className='modal-body'> 
+                                            <button type="button" className="modal-close" data-dismiss="modal" aria-label="Close" >
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>  
+                                        </div>
+                                    </div>
                                 </div>
                             </div>             
                     
-                </div>
+                    </div>
                 
-                   <div className='outer-season'>
-
+                    <div className='outer-season'>
                         <h3 className="season-name" >Season Pass</h3>
                         <div className='price'>
                         <h4 className="names"> {`$${e.seasonpass}.00`}</h4>  

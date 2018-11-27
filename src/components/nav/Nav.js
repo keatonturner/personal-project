@@ -19,10 +19,10 @@ function Nav(props){
             <div className="collapse" id="navbarToggleExternalContent">
                 <div className="bg-dark d-flex p-4 border-bottom border-light">
                     <div className='w-100 d-flex flex-column justify-content-center '>
-                        <Link className='nav-link text-dark w-25 bg-light m-1 w-100' style={font} to='/home' ><i className="fas fa-snowflake" />{' '}Home</Link>  
-                        <Link className='nav-link text-dark w-25 bg-light m-1 w-100' style={font} to='/resorts' ><i className="fas fa-snowflake" />{' '}Resorts</Link>      
-                        <Link className='nav-link text-dark w-25 bg-light m-1 w-100' style={font} to='/cart' ><i className="fas fa-snowflake" />{' '}Cart</Link>                   
-                        <Link className='nav-link text-dark w-25 bg-light m-1 w-100' style={font} to='/account'><i className="fas fa-snowflake" />{' '}Account</Link>     
+                        <Link className='nav-link text-dark bg-light m-1 w-100' style={font} to='/home' ><i className="fas fa-snowflake" />{' '}Home</Link>  
+                        <Link className='nav-link text-dark bg-light m-1 w-100' style={font} to='/resorts' ><i className="fas fa-snowflake" />{' '}Resorts</Link>      
+                        <Link className='nav-link text-dark bg-light m-1 w-100' style={font} to='/cart' ><i className="fas fa-snowflake" />{' '}Cart</Link>                   
+                        <Link className='nav-link text-dark bg-light m-1 w-100' style={font} to='/account'><i className="fas fa-snowflake" />{' '}Account</Link>     
                     </div>
                 </div>
             </div>
