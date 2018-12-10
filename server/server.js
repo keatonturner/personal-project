@@ -153,8 +153,8 @@ let {sub, email, name, picture} = resWithUserData.data;
 
 massive(CONNECTION_STRING).then(db => {
     app.set('db', db);
+});
 app.listen(REACT_APP_SERVER_PORT, () => {
     console.log(`listening on port: ${REACT_APP_SERVER_PORT}`)
-    })
 });
 
